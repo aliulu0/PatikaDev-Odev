@@ -2,6 +2,7 @@
 <a href='#Ödev 1'>Ödev - 1</a><br>
 <a href='#Ödev 2'>Ödev - 2</a><br>
 <a href='#Ödev 3'>Ödev - 3</a><br>
+<a href='#Ödev 4'>Ödev - 4</a><br>
 
 
 ## <p id = 'Ödev 1' > Ödev - 1 </p> 
@@ -57,4 +58,26 @@ SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
 ### 4) film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile başlayan ve uzunluğu (length) 90 dan büyük olan ve rental_rate 2.99 olan verileri sıralayınız. 
 ~~~sql
 SELECT * FROM film WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
+~~~
+
+## <p id = 'Ödev 4' > Ödev - 4 </p>
+### 1) film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+~~~sql
+SELECT DISTINCT replacement_cost FROM film;
+~~~
+### 2) film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+~~~sql
+SELECT COUNT(DISTINCT replacement_cost) FROM film;
+~~~
+### 3) film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+~~~sql
+SELECT COUNT(*) FROM film WHERE title LIKE 'T%' AND rating = 'G';
+~~~
+### 4) country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+~~~sql
+SELECT COUNT(*) FROM country WHERE LENGTH(country) = 5 ;
+~~~
+### 5) city tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
+~~~sql
+SELECT COUNT(*) FROM city WHERE city ILIKE  '%r';
 ~~~
