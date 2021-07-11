@@ -3,6 +3,7 @@
 <a href='#Ödev 2'>Ödev - 2</a><br>
 <a href='#Ödev 3'>Ödev - 3</a><br>
 <a href='#Ödev 4'>Ödev - 4</a><br>
+<a href='#Ödev 5'>Ödev - 5</a><br>
 
 
 ## <p id = 'Ödev 1' > Ödev - 1 </p> 
@@ -80,4 +81,17 @@ SELECT COUNT(*) FROM country WHERE LENGTH(country) = 5 ;
 ### 5) city tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
 ~~~sql
 SELECT COUNT(*) FROM city WHERE city ILIKE  '%r';
+~~~
+## <p id = 'Ödev 5' > Ödev - 5 </p>
+### 1) film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
+~~~sql
+SELECT title FROM film WHERE title LIKE '%n' ORDER BY LENGTH(title) DESC LIMIT 5;
+~~~
+### 2) film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci 5 filmi sıralayınız.
+~~~sql
+SELECT title FROM film WHERE title LIKE '%n' ORDER BY LENGTH(title) DESC OFFSET 5 LIMIT 5;
+~~~
+### 3) customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+~~~sql
+SELECT * FROM customer WHERE store_id = 1 ORDER BY last_name DESC LIMIT 4;
 ~~~
