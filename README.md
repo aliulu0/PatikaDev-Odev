@@ -5,6 +5,7 @@
 <a href='#Ödev 4'>Ödev - 4</a><br>
 <a href='#Ödev 5'>Ödev - 5</a><br>
 <a href='#Ödev 6'>Ödev - 6</a><br>
+<a href='#Ödev 7'>Ödev - 7</a><br>
 
 
 ## <p id = 'Ödev 1' > Ödev - 1 </p> 
@@ -96,6 +97,7 @@ SELECT title FROM film WHERE title LIKE '%n' ORDER BY LENGTH(title) DESC OFFSET 
 ~~~sql
 SELECT * FROM customer WHERE store_id = 1 ORDER BY last_name DESC LIMIT 4;
 ~~~
+
 ## <p id = 'Ödev 6' > Ödev - 6 </p> 
 ### 1) film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
 ~~~sql
@@ -111,5 +113,24 @@ SELECT MAX(length) FROM film WHERE rental_rate = 0.99;
 ~~~
 ### 4) film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
 ~~~sql
-SELECT COUNT( DISTINCT replacement_cost )FROM film WHERE length > 150;
+SELECT COUNT( DISTINCT replacement_cost ) FROM film WHERE length > 150;
 ~~~
+
+## <p id = 'Ödev 7' > Ödev - 1 </p> 
+### 1) film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
+~~~sql
+SELECT rating FROM film GROUP BY rating; 
+~~~
+### 2) film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+~~~sql
+SELECT replacement_cost, COUNT(*) FROM film GROUP BY replacement_cost HAVING COUNT(*) > 50;
+~~~
+### 3) customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir? 
+~~~sql
+SELECT store_id, COUNT(*) FROM customer GROUP BY store_id;
+~~~
+### 4) city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıra country_id bilgisini ve şehir sayısını paylaşınız.
+~~~sql
+SELECT country_id,COUNT(*) FROM city GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;
+~~~
+
