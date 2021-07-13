@@ -6,7 +6,7 @@
 <a href='#Ödev 5'>Ödev - 5</a><br>
 <a href='#Ödev 6'>Ödev - 6</a><br>
 <a href='#Ödev 7'>Ödev - 7</a><br>
-
+<a href='#Ödev 8'>Ödev - 8</a><br>
 
 ## <p id = 'Ödev 1' > Ödev - 1 </p> 
 ### 1) film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
@@ -134,3 +134,83 @@ SELECT store_id, COUNT(*) FROM customer GROUP BY store_id;
 SELECT country_id,COUNT(*) FROM city GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;
 ~~~
 
+
+## <p id = 'Ödev 8' > Ödev - 8 </p> 
+### 1) test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+~~~sql
+CREATE TABLE employee 
+(id SERIAL PRIMARY KEY, 
+name VARCHAR(50), 
+email VARCHAR(100)
+birtday DATE
+); 
+~~~
+### 2) Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+~~~sql
+insert into author (name, email, birtday) values ('Adrien Liepina', 'aliepina0@admin.ch', null);
+insert into author (name, email, birtday) values ('Maisie Bonar', 'mbonar1@lycos.com', '1944-01-28');
+insert into author (name, email, birtday) values ('Alethea Haddleston', 'ahaddleston2@angelfire.com', null);
+insert into author (name, email, birtday) values ('Normie Leonard', 'nleonard3@lulu.com', '1988-11-17');
+insert into author (name, email, birtday) values ('Sherman Rickman', 'srickman4@oaic.gov.au', '1977-08-30');
+insert into author (name, email, birtday) values ('Kin Okell', 'kokell5@mediafire.com', '1978-08-07');
+insert into author (name, email, birtday) values ('Jody Lofty', 'jlofty6@upenn.edu', '1978-06-26');
+insert into author (name, email, birtday) values ('June Durkin', 'jdurkin7@hhs.gov', null);
+insert into author (name, email, birtday) values ('Dorelia Pleuman', 'dpleuman8@ucoz.ru', '1922-02-04');
+insert into author (name, email, birtday) values ('Brendin Deeley', 'bdeeley9@hc360.com', '1978-10-08');
+insert into author (name, email, birtday) values ('Dona Birdall', 'dbirdalla@wunderground.com', '1925-03-07');
+insert into author (name, email, birtday) values ('Savina Baddam', 'sbaddamb@ezinearticles.com', null);
+insert into author (name, email, birtday) values ('Jackelyn McCarly', 'jmccarlyc@pen.io', '1992-10-12');
+insert into author (name, email, birtday) values ('Brooks Casarino', null, '1952-11-14');
+insert into author (name, email, birtday) values ('Danica Dodds', 'ddoddse@domainmarket.com', '1912-03-22');
+insert into author (name, email, birtday) values ('Nanon Lean', 'nleanf@soundcloud.com', '1924-02-23');
+insert into author (name, email, birtday) values ('Melonie Riddell', 'mriddellg@globo.com', '1975-12-11');
+insert into author (name, email, birtday) values ('Nicoline Copin', 'ncopinh@ocn.ne.jp', '1948-10-18');
+insert into author (name, email, birtday) values ('Dana Purton', 'dpurtoni@photobucket.com', '1925-04-25');
+insert into author (name, email, birtday) values ('Kayle Grinov', 'kgrinovj@tinyurl.com', '1901-05-01');
+insert into author (name, email, birtday) values ('Lisabeth Gristwood', 'lgristwoodk@dot.gov', '1987-09-26');
+insert into author (name, email, birtday) values ('Vida Truscott', 'vtruscottl@spotify.com', '1932-07-10');
+insert into author (name, email, birtday) values ('Wilma Kleinzweig', 'wkleinzweigm@nps.gov', '1928-01-30');
+insert into author (name, email, birtday) values ('Reidar Domesday', 'rdomesdayn@wikia.com', '1919-06-16');
+insert into author (name, email, birtday) values ('Elayne Pleven', 'epleveno@google.it', '1948-09-22');
+insert into author (name, email, birtday) values ('Clementina Gorling', 'cgorlingp@sciencedirect.com', '1992-04-02');
+insert into author (name, email, birtday) values ('Izaak Furst', 'ifurstq@illinois.edu', '1969-11-09');
+insert into author (name, email, birtday) values ('Norrie Hathaway', 'nhathawayr@phpbb.com', '1970-03-11');
+insert into author (name, email, birtday) values ('Birdie Georgi', 'bgeorgis@themeforest.net', null);
+insert into author (name, email, birtday) values ('Lyndell Handrahan', 'lhandrahant@fema.gov', null);
+insert into author (name, email, birtday) values ('Harley McDermid', 'hmcdermidu@ucoz.com', '1977-09-03');
+insert into author (name, email, birtday) values ('Bryn Sperry', 'bsperryv@clickbank.net', '1956-07-26');
+insert into author (name, email, birtday) values ('Celestine Kolushev', 'ckolushevw@statcounter.com', '1970-11-08');
+insert into author (name, email, birtday) values ('Viva Morillas', null, '1907-07-28');
+insert into author (name, email, birtday) values ('Ruprecht Malser', 'rmalsery@1und1.de', '1965-07-09');
+insert into author (name, email, birtday) values ('Cori Redborn', 'credbornz@netscape.com', '1945-10-29');
+insert into author (name, email, birtday) values ('Evered Loreit', 'eloreit10@gnu.org', '1920-06-24');
+insert into author (name, email, birtday) values ('Roma Pellamont', 'rpellamont11@jimdo.com', '1945-10-03');
+insert into author (name, email, birtday) values ('Jordanna Dall', 'jdall12@wikispaces.com', '1978-02-23');
+insert into author (name, email, birtday) values ('Carling Meekins', 'cmeekins13@tripadvisor.com', null);
+insert into author (name, email, birtday) values ('Dorice Kibbye', 'dkibbye14@biblegateway.com', '1950-09-02');
+insert into author (name, email, birtday) values ('Carey Feldhammer', 'cfeldhammer15@dell.com', '1984-05-15');
+insert into author (name, email, birtday) values ('Alikee Eagar', 'aeagar16@infoseek.co.jp', '1927-07-20');
+insert into author (name, email, birtday) values ('Lothaire Eveleigh', 'leveleigh17@cargocollective.com', '1974-04-21');
+insert into author (name, email, birtday) values ('Chrisse Bernette', 'cbernette18@deviantart.com', null);
+insert into author (name, email, birtday) values ('Dario Sedgwick', null, '1951-11-08');
+insert into author (name, email, birtday) values ('Jaine Caras', 'jcaras1a@chron.com', null);
+insert into author (name, email, birtday) values ('Franky Jacobovitz', 'fjacobovitz1b@china.com.cn', '1957-08-26');
+insert into author (name, email, birtday) values ('Dal Sidery', 'dsidery1c@comsenz.com', '1907-01-18');
+insert into author (name, email, birtday) values ('Caterina Fideler', 'cfideler1d@over-blog.com', '1954-08-24');
+~~~
+### 3) Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+~~~sql
+UPDATE employee SET name = 'David Beckham' WHERE id = 7;
+UPDATE employee SET email = 'david@beckham.com' WHERE name = 'David Beckham';
+UPDATE employee SET birtday = '1975-05-02' WHERE id = 7;
+UPDATE employee SET name = 'Tom Hardy' WHERE name LIKE 'J%';
+UPDATE employee SET email = 'whats@up.com' WHERE id = 15;
+~~~
+### 4) Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+~~~sql
+DELETE FROM employee WHERE id = 7;
+DELETE FROM employee WHERE name = 'Lothaire Eveleigh';
+DELETE FROM employee WHERE id > 25;
+DELETE FROM employee WHERE email = 'dsidery1c@comsenz.com';
+DELETE FROM employee WHERE birtday = '1970-03-11';
+~~~
