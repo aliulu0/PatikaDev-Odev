@@ -8,6 +8,7 @@
 <a href='#Ödev 7'>Ödev - 7</a><br>
 <a href='#Ödev 8'>Ödev - 8</a><br>
 <a href='#Ödev 9'>Ödev - 9</a><br>
+<a href='#Ödev 10'>Ödev - 10</a><br>
 
 ## <p id = 'Ödev 1' > Ödev - 1 </p> 
 #### 1) film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
@@ -227,4 +228,18 @@ SELECT payment_id,first_name,last_name FROM payment INNER JOIN customer ON custo
 #### 3) customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 ~~~sql
 SELECT rental_id,first_name,last_name FROM rental INNER JOIN customer ON customer.customer_id = rental.customer_id;
+~~~
+
+## <p id = 'Ödev 10' > Ödev - 10 </p> 
+#### 1) city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+~~~sql
+SELECT city,country FROM country LEFT JOIN city ON city.country_id = country.country_id; 
+~~~
+#### 2) customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+~~~sql
+SELECT payment_id,first_name,last_name FROM customer RIGHT JOIN payment ON customer.customer_id = payment.customer_id;
+~~~
+#### 3) customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+~~~sql
+SELECT rental_id,first_name,last_name FROM customer FULL JOIN rental ON customer.customer_id = rental.customer_id;
 ~~~
