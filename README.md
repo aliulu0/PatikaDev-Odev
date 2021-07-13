@@ -116,7 +116,7 @@ SELECT MAX(length) FROM film WHERE rental_rate = 0.99;
 SELECT COUNT( DISTINCT replacement_cost ) FROM film WHERE length > 150;
 ~~~
 
-## <p id = 'Ödev 7' > Ödev - 1 </p> 
+## <p id = 'Ödev 7' > Ödev - 7 </p> 
 #### 1) film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
 ~~~sql
 SELECT rating FROM film GROUP BY rating; 
